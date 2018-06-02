@@ -1,0 +1,6 @@
+#!/bin/bash
+
+files=('./README.md' './DEMO.rb' './bin/vimall' './vimrc' './Gemfile' './.gitignore')
+files_find=($( find ./src -iname '*.rb' ))
+
+vim +'source ./vimrc' ${files[@]} ${files_find[@]}
